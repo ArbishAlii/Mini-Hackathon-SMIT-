@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hackathon</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
 
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -28,18 +31,43 @@
           <li><a href="#">Contact Us</a></li>
           <li><a href="#">Recipe</a></li>
         </ul>
-        <div class="cart-icon">
-          <i class="fa-solid fa-bag-shopping" class="cart-icon"></i>
-          
+
+
+
+
+
+
+
+        <div class="cart-container">
+          <!-- Basket Icon -->
+          <div class="cart-icon" id="cart-icon">
+            <i class="fa-solid fa-bag-shopping" style="cursor: pointer; font-size: 24px;"></i>
+          </div>
+        
+          <!-- Add to Cart Form -->
+          <div id="cart" style="display: none; border: 1px solid #ccc; padding: 10px; width: 250px; position: absolute; background-color: white;">
+            <h4>Add to Cart</h4>
+            <p>Adjust the quantity:</p>
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+              <button id="decrease" style="width: 30px; height: 30px;">-</button>
+              <span id="quantity" style="margin: 0 10px; font-size: 18px;">0</span>
+              <button id="increase" style="width: 30px; height: 30px;">+</button>
+            </div>
+            <button id="confirm" style="margin-top: 10px; width: 100%; background-color: #007bff; color: white; border: none; padding: 8px 0;">Confirm</button>
+          </div>
         </div>
+        
+        
+
+
+
       </nav>
     </header>
 
     <section class="hero-section">
       <div class="content">
         <h1>
-          The <span class="bold">De Simone
-          Formulation</span> unique<br />
+          The <span class="bold">De Simone Formulation</span> unique<br />
           and certified by <span class="highlight">the Inventor</span>
         </h1>
         <h1 class="subtitle">
@@ -438,31 +466,61 @@
     <section>
       <div class="sec8">
         <div id="contact-form">
-       <div class="radio">
-       <input type="radio" value="Say Hi" name="" checked="checked">Say Hi
-       <input type="radio" value="Quote" name="" >Get a Quote
-       </div>
-        
-       
+          <div class="radio">
+            <input type="radio" value="Say Hi" name="" checked="checked" />Say
+            Hi <input type="radio" value="Quote" name="" />Get a Quote
+          </div>
+
           <form>
             <label for="name">Name</label>
-            <input type="text" id="name" placeholder="Enter your Name" required>
+            <input
+              type="text"
+              id="name"
+              placeholder="Enter your Name"
+              required
+            />
             <label for="E-mail">Email* </label>
-            <input type="email" id="email" placeholder="Enter your E-mail" required>
+            <input
+              type="email"
+              id="email"
+              placeholder="Enter your E-mail"
+              required
+            />
             <label for="message">Message* </label>
-            <textarea name="message" id="message" placeholder="Enter your message" rows="7" required></textarea>
+            <textarea
+              name="message"
+              id="message"
+              placeholder="Enter your message"
+              rows="7"
+              required
+            ></textarea>
+            <p>Processing of Personal data</p>
+            <input type="checkbox" value="" /> I consent to the processing of
+            personal data after reading the
+            <span class="underline">Privacy Policy</span>
+            <br />
             <button class="btn" type="submit">Send Message</button>
           </form>
         </div>
         <div class="lastimg">
           <h5>CDS<span class="pink">22</span>-formula</h5>
           <img src="asset/boxes.png" alt="" />
+       
+    
+
         </div>
       </div>
-    </section>
-
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
-    <script src="index.js"></script>
+  
+  <div class="wavy-background2">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 150">
+      <path
+        fill="#007BFF"
+        fill-opacity="1"
+        d="M0,32L60,48C120,64,240,96,360,106.7C480,117,600,106,720,90.7C840,75,960,53,1080,48C1200,43,1320,53,1380,58.7L1440,64L1440,150L1380,150C1320,150,1200,150,1080,150C960,150,840,150,720,150C600,150,480,150,360,150C240,150,120,150,60,150L0,150Z"
+      ></path>
+    </svg>
+  </div>
+</section>
+    <script type="module" src="index.js"></script>
   </body>
 </html>
